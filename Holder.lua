@@ -13,4 +13,5 @@ if not GUI then
    NofiticationUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
    NofiticationUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
    NofiticationUIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+   NotificationUIListLayout.Padding = UDim.new(0, 5)
 end
