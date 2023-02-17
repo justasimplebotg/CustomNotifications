@@ -51,7 +51,7 @@ function Library:MakeNotification(title, description, duration)
 
 		task.wait(duration)
 
-		Notification:Destroy()
+		NotifFrame:Destroy()
 	else
 		warn("error, no holder found - please load the holder with loadstring(game:HttpGet('https://raw.githubusercontent.com/justasimplebotg/CustomNotifications/main/Holder.lua'))()")
 	end
