@@ -2,17 +2,12 @@ local Library = {}
 
 function Library:MakeNotification(title, description, duration)
 	if game:GetService("CoreGui"):FindFirstChild("VX-Notification") then
-		local Notification = Instance.new("ScreenGui")
 		local NotifFrame = Instance.new("Frame")
 		local Title = Instance.new("TextLabel")
 		local Description = Instance.new("TextLabel")
 
-		Notification.Name = "Notification"
-		Notification.Parent = game:GetService("CoreGui"):FindFirstChild("VX-Notification")
-		Notification.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 		NotifFrame.Name = "NotifFrame"
-		NotifFrame.Parent = Notification
+		NotifFrame.Parent = game:GetService("CoreGui"):FindFirstChild("VX-Notification")
 		NotifFrame.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
 		NotifFrame.BackgroundTransparency = 0.10000000149011612
 		NotifFrame.BorderSizePixel = 0
