@@ -13,10 +13,10 @@ function makegui(title, desc, duration)
 	NotifFrame.Name = "NotifFrame"
 	NotifFrame.Parent = Notification
 	NotifFrame.BackgroundColor3 = Color3.new(0.231373, 0.231373, 0.231373)
+	NotifFrame.BackgroundTransparency = 0.20000000298023224
 	NotifFrame.BorderSizePixel = 0
-	NotifFrame.Position = UDim2.new(1, 0, 0.873000026, 0)
-	NotifFrame.Size = UDim2.new(0.162392393, 0, 0.0809228718, 0)
-	NotifFrame.Style = Enum.FrameStyle.DropShadow
+	NotifFrame.Position = UDim2.new(1, 0, 0.86500001, 0)
+	NotifFrame.Size = UDim2.new(0.187330037, 0, 0.086390771, 0)
 
 	Title.Name = "Title"
 	Title.Parent = NotifFrame
@@ -46,9 +46,9 @@ function makegui(title, desc, duration)
 	Description.TextSize = 14
 	Description.TextStrokeTransparency = 0
 	Description.TextWrapped = true
-	
+
 	local MoveTweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	local MoveTweenPosition = UDim2.new(0.827, 0,0.873, 0)
+	local MoveTweenPosition = UDim2.new(0.798, 0,0.865, 0)
 
 	game:GetService("TweenService"):Create(NotifFrame, MoveTweenInfo, {Position = MoveTweenPosition}):Play()
 
