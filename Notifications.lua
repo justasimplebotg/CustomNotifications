@@ -8,19 +8,18 @@ function Library:MakeNotification(title, description, duration)
 
 		NotifFrame.Name = "NotifFrame"
 		NotifFrame.Parent = game:GetService("CoreGui"):FindFirstChild("VX-Notification")
-		NotifFrame.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-		NotifFrame.BackgroundTransparency = 0.10000000149011612
+		NotifFrame.BackgroundColor3 = Color3.new(0.231373, 0.231373, 0.231373)
 		NotifFrame.BorderSizePixel = 0
-		NotifFrame.Position = UDim2.new(1, 0, 0.906000018, 0)
-		NotifFrame.Size = UDim2.new(0.122907765, 0, 0.0482093729, 0)
-		NotifFrame.Visible = true
+		NotifFrame.Position = UDim2.new(1, 0, 0.91900003, 0)
+		NotifFrame.Size = UDim2.new(0.162392393, 0, 0.0809228718, 0)
+		NotifFrame.Style = Enum.FrameStyle.DropShadow
 
 		Title.Name = "Title"
 		Title.Parent = NotifFrame
 		Title.BackgroundColor3 = Color3.new(1, 1, 1)
 		Title.BackgroundTransparency = 1
-		Title.Position = UDim2.new(0.0467702597, 0, 0, 0)
-		Title.Size = UDim2.new(0.898664176, 0, 0.408163309, 0)
+		Title.Position = UDim2.new(0.0516391322, 0, -0.0425531864, 0)
+		Title.Size = UDim2.new(0.304807276, 0, 0.460047692, 0)
 		Title.Font = Enum.Font.Jura
 		Title.Text = title
 		Title.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
@@ -34,8 +33,8 @@ function Library:MakeNotification(title, description, duration)
 		Description.BackgroundColor3 = Color3.new(1, 1, 1)
 		Description.BackgroundTransparency = 1
 		Description.BorderSizePixel = 0
-		Description.Position = UDim2.new(0.0467702597, 0, 0.408163846, 0)
-		Description.Size = UDim2.new(0.898664176, 0, 0.59183687, 0)
+		Description.Position = UDim2.new(0.0931700692, 0, 0.445581287, 0)
+		Description.Size = UDim2.new(0.80666244, 0, 0.384206325, 0)
 		Description.Font = Enum.Font.Jura
 		Description.Text = description
 		Description.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
