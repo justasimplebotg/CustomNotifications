@@ -48,7 +48,7 @@ function makegui(title, desc, duration)
 	Description.TextWrapped = true
 	
 	local MoveTweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	local MoveTweenPosition = UDim2.new(0.868, 0,0.906, 0)
+	local MoveTweenPosition = UDim2.new(0.827, 0,0.873, 0)
 
 	game:GetService("TweenService"):Create(NotifFrame, MoveTweenInfo, {Position = MoveTweenPosition}):Play()
 
