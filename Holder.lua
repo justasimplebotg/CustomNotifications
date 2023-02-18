@@ -1,17 +1,17 @@
 local GUI = game:GetService("CoreGui"):FindFirstChild("VX-Notification")
 
 if not GUI then
-   local Nofitication = Instance.new("ScreenGui")
-   local NofiticationUIListLayout = Instance.new("UIListLayout")
-   Nofitication.Name = "VX-Notification"
-   Nofitication.Parent = game.CoreGui
-   Nofitication.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-   Nofitication.ResetOnSpawn = false
-    
-   NofiticationUIListLayout.Name = "VX-Notification-Layout"
-   NofiticationUIListLayout.Parent = Nofitication
-   NofiticationUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
-   NofiticationUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-   NofiticationUIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
-   NotificationUIListLayout.Padding = UDim.new(0, 5)
+	local Notification = Instance.new("ScreenGui")
+	local NotificationUIListLayout = Instance.new("UIListLayout")
+	Notification.Name = "VX-Notification"
+	Notification.Parent = game.CoreGui
+	Notification.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Notification.ResetOnSpawn = false
+
+	NotificationUIListLayout.Name = "VX-Notification-Layout"
+	NotificationUIListLayout.Parent = Notification
+	NotificationUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+	NotificationUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	NotificationUIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+	NotificationUIListLayout.Padding = UDim.new(0, 5)
 end
