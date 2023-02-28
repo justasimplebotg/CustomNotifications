@@ -57,12 +57,12 @@ function MakeNotification(title,desc,duration)
 		local f = game:GetService("TweenService"):Create(Notification,tweenInfo,TWEENING)
 		
 		f:Play()
-
-		repeat task.wait() until f.Completed
 		
-		task.wait(0.3)
+		if f.Completed then
+		   task.wait(0.3)
 		
-		Notification:Destroy()
+		   Notification:Destroy()
+	        end
 	else
 		CheckHolder(title,desc,duration)
 	end
