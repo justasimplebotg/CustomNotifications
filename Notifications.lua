@@ -60,7 +60,7 @@ function MakeNotification(title,desc,duration)
 
 		repeat task.wait() until f.Completed
 		
-		task.wait(0.1)
+		task.wait(0.3)
 		
 		Notification:Destroy()
 	else
