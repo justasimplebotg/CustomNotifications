@@ -7,6 +7,8 @@ function MakeNotification(title,desc,duration)
 		local Description = Instance.new("TextLabel")
 		local UICorner = Instance.new("UICorner")
 		
+		print("Why")
+		
 		Notification.Name = "Notification"
 		Notification.Parent = game:GetService("CoreGui"):FindFirstChild("Notifications"):FindFirstChild("Holder")
 		Notification.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
@@ -78,14 +80,18 @@ function CheckHolder(title, desc, duration)
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 		UIListLayout.Padding = UDim.new(0, 5)
+		MakeNotification(title,duration,desc)
+		print("Noob")
 	else
 		MakeNotification(title,duration,desc)
+		print("Awesome")
 	end
 end
 
 function Library:MakeNotification(title, description, duration)
 	if not game:GetService("CoreGui"):FindFirstChild("Notifications") then
 		CheckHolder(title,description,duration)
+		print("Hi")
 	else
 		MakeNotification(title,description,duration)
 	end
