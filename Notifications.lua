@@ -6,13 +6,13 @@ function MakeNotification(title,desc,duration)
 		local Title = Instance.new("TextLabel")
 		local Description = Instance.new("TextLabel")
 		local UICorner = Instance.new("UICorner")
-		
+
 		Notification.Name = "Notification"
 		Notification.Parent = game:GetService("CoreGui"):FindFirstChild("Notifications"):FindFirstChild("Holder")
 		Notification.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
 		Notification.BorderSizePixel = 0
 		Notification.Position = UDim2.new(1, 0, 0.86500001, 0)
-		Notification.Size = UDim2.new(0.969, 0,0.911, 0)
+		Notification.Size = UDim2.new(0.187, 0,0.086, 0)
 
 		Title.Name = "Title"
 		Title.Parent = Notification
@@ -44,8 +44,14 @@ function MakeNotification(title,desc,duration)
 		UICorner.Parent = Notification
 		UICorner.CornerRadius = UDim.new(0, 10)
 		
-		task.wait(duration)
+		local tweenInfo = TweenInfo.new(0.6,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut)
 		
+		local tweenSize = {Size = UDim2.new(0.969, 0,0.911, 0)}
+		
+		game:GetService("TweenService"):Create(Notification,tweenInfo,tweenSize):Play()
+
+		task.wait(duration)
+
 		Notification:Destroy()
 	else
 		CheckHolder(title,desc,duration)
@@ -57,7 +63,7 @@ function CheckHolder(title, desc, duration)
 		local Notifications = Instance.new("ScreenGui")
 		Notifications.Name = "Notifications"
 		Notifications.Parent = game:GetService("CoreGui")
-		
+
 		local Holder = Instance.new("Frame")
 		Holder.Name = "Holder"
 		Holder.Parent = Notifications
@@ -66,7 +72,7 @@ function CheckHolder(title, desc, duration)
 		Holder.BorderSizePixel = 0
 		Holder.Position = UDim2.new(0.798123062, 0, 0.865399837, 0)
 		Holder.Size = UDim2.new(0.187330037, 0, 0.086390771, 0)
-		
+
 		local UIListLayout = Instance.new("UIListLayout")
 		UIListLayout.Parent = Holder
 		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -74,7 +80,7 @@ function CheckHolder(title, desc, duration)
 		UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
 		UIListLayout.FillDirection = Enum.FillDirection.Vertical
 		UIListLayout.Padding = UDim.new(0, 5)
-		
+
 		MakeNotification(title,desc,duration)
 	else
 		MakeNotification(title,desc,duration)
