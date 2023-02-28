@@ -54,11 +54,15 @@ function MakeNotification(title,desc,duration)
 
 		local TWEENING = {Size = UDim2.new(0.187, 0,0.086, 0)}
 
-		game:GetService("TweenService"):Create(Notification,tweenInfo,TWEENING):Play()
+		local f = game:GetService("TweenService"):Create(Notification,tweenInfo,TWEENING)
+		
+		f:Play()
 
 		task.wait(0.2)
 
-		print("hi")
+		repeat task.wait() until f.Completed
+		
+		Notification:Destroy()
 	else
 		CheckHolder(title,desc,duration)
 	end
