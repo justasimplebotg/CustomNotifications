@@ -52,11 +52,9 @@ function MakeNotification(title,desc,duration)
 
 		task.wait(duration)
 		
-		tweenSize = {Size = UDim2.new(0.187, 0,0.086, 0)}
+		local tweensize = {Size = UDim2.new(0.187, 0,0.086, 0)}
 		
-		local t = game:GetService("TweenService"):Create(Notification,tweenInfo,tweenSize)
-		
-		t:Play()
+		local t = game:GetService("TweenService"):Create(Notification,tweenInfo,tweensize):Play()
 		
 		if t.Completed then
 			Notification:Destroy()
