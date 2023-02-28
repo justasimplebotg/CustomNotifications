@@ -58,9 +58,9 @@ function MakeNotification(title,desc,duration)
 		
 		f:Play()
 
-		task.wait(0.2)
-
 		repeat task.wait() until f.Completed
+		
+		task.wait(0.1)
 		
 		Notification:Destroy()
 	else
