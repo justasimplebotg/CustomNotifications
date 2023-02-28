@@ -43,16 +43,24 @@ function MakeNotification(title,desc,duration)
 
 		UICorner.Parent = Notification
 		UICorner.CornerRadius = UDim.new(0, 10)
-		
+
 		local tweenInfo = TweenInfo.new(0.6,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut)
-		
+
 		local tweenSize = {Size = UDim2.new(0.969, 0,0.911, 0)}
-		
+
 		game:GetService("TweenService"):Create(Notification,tweenInfo,tweenSize):Play()
 
 		task.wait(duration)
-
-		Notification:Destroy()
+		
+		tweenSize = {Size = UDim2.new(0.187, 0,0.086, 0)}
+		
+		local t = game:GetService("TweenService"):Create(Notification,tweenInfo,tweenSize)
+		
+		t:Play()
+		
+		if t.Completed then
+			Notification:Destroy()
+		end
 	else
 		CheckHolder(title,desc,duration)
 	end
