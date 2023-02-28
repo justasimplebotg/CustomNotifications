@@ -7,14 +7,12 @@ function MakeNotification(title,desc,duration)
 		local Description = Instance.new("TextLabel")
 		local UICorner = Instance.new("UICorner")
 		
-		print("Why")
-		
 		Notification.Name = "Notification"
 		Notification.Parent = game:GetService("CoreGui"):FindFirstChild("Notifications"):FindFirstChild("Holder")
 		Notification.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
 		Notification.BorderSizePixel = 0
 		Notification.Position = UDim2.new(1, 0, 0.86500001, 0)
-		Notification.Size = UDim2.new(0.187330037, 0, 0.086390771, 0)
+		Notification.Size = UDim2.new(0.969, 0,0.911, 0)
 
 		Title.Name = "Title"
 		Title.Parent = Notification
@@ -23,7 +21,7 @@ function MakeNotification(title,desc,duration)
 		Title.Position = UDim2.new(0, 0, 0.136816427, 0)
 		Title.Size = UDim2.new(0.356446445, 0, 0.161098674, 0)
 		Title.Font = Enum.Font.ArialBold
-		Title.Text = "PH Title"
+		Title.Text = title
 		Title.TextColor3 = Color3.new(1, 1, 1)
 		Title.TextScaled = true
 		Title.TextSize = 14
@@ -37,7 +35,7 @@ function MakeNotification(title,desc,duration)
 		Description.Position = UDim2.new(0, 0, 0.4455809, 0)
 		Description.Size = UDim2.new(1.00000012, 0, 0.434840143, 0)
 		Description.Font = Enum.Font.Arial
-		Description.Text = "PH Desc"
+		Description.Text = desc
 		Description.TextColor3 = Color3.new(1, 1, 1)
 		Description.TextScaled = true
 		Description.TextSize = 14
@@ -45,11 +43,6 @@ function MakeNotification(title,desc,duration)
 
 		UICorner.Parent = Notification
 		UICorner.CornerRadius = UDim.new(0, 10)
-		
-		local MoveTweenInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local MoveTweenPosition = UDim2.new(0.798, 0,0.865, 0)
-
-		game:GetService("TweenService"):Create(Notification, MoveTweenInfo, {Position = MoveTweenPosition}):Play()
 		
 		task.wait(duration)
 		
@@ -80,18 +73,15 @@ function CheckHolder(title, desc, duration)
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 		UIListLayout.Padding = UDim.new(0, 5)
-		MakeNotification(title,duration,desc)
-		print("Noob")
+		MakeNotification(title,desc,duration)
 	else
-		MakeNotification(title,duration,desc)
-		print("Awesome")
+		MakeNotification(title,desc,duration)
 	end
 end
 
 function Library:MakeNotification(title, description, duration)
 	if not game:GetService("CoreGui"):FindFirstChild("Notifications") then
 		CheckHolder(title,description,duration)
-		print("Hi")
 	else
 		MakeNotification(title,description,duration)
 	end
