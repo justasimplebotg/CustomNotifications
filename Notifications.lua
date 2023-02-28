@@ -71,8 +71,10 @@ function CheckHolder(title, desc, duration)
 		UIListLayout.Parent = Holder
 		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+		UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+		UIListLayout.FillDirection = Enum.FillDirection.Vertical
 		UIListLayout.Padding = UDim.new(0, 5)
+		
 		MakeNotification(title,desc,duration)
 	else
 		MakeNotification(title,desc,duration)
